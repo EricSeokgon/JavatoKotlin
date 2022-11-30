@@ -6,7 +6,7 @@ public class EmailAddress {
         var atIndex = value.lastIndexof('@');
         if (atIndex < 1 || atIndex == value.legth() - 1) {
             throw new IllegalArgumentExceptrion(
-                    "EmailAddress must be two parts separated by @"
+                    "travelator.EmailAddress must be two parts separated by @"
             );
             return new EmailAddress(value.substring(0, atIndex), value.substring(atIndex + 1));
         }

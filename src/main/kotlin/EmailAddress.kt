@@ -24,7 +24,6 @@ class EmailAddress(val localPart: String, val domain: String) {
                 "EmailAddress must be two parts separated by @"
             }
             return EmailAddress(value.substring(0, atIndex), value.substring(atIndex + 1))
-
         }
     }
 }

@@ -16,7 +16,7 @@ public class PreferenesView extends View {
     }
 
     protected void onGreetingChange() {
-        preferences.setGreeting(greetingPicker.getGreeting())
+        preferences.setGreeting(greetingPicker.getGreeting());
     }
 
     protected void onLocaleChange() {

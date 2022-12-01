@@ -9,14 +9,8 @@ public class Legs {
             }
             return Optional.ofNullable(result);*/
         var logestLeg = legs.stream()
-                .max(Comparator.comparing(Leg::getPlannedFuration));
-        if (longestLeg.isEmpty()) {
-            return Optional.empty();
-        } else if (isLongerThan(logestLeg.get(), duration)) {
-            return logestLeg;
-        } else {
-            return Option.empty();
-        }
+                .max(Comparator.comparing(Leg::getPlannedFuration))
+                .filter(leg -> isLongerThan(leg, duration));
     }
 
     private static boolean isLongerThan(Leg leg, Duration duration) {
